@@ -5,10 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "docker build -t openwrt:latest .",
+    "build": "docker build -t valistarguo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16:latest .",
     "prepush": "npm run build",
-    "push": "docker push valistarguo/openwrt-sdk-arm_cortex-a9_vfpv3-d16",
-    "postpush": "git push"
+    "push": "docker push valistarguo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16",
+    "postpush": "git push",
+    "ca": "git add -A && git-cz -av",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "release:first": "standard-version --first-release"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,19 @@
   "bugs": {
     "url": "https://github.com/Val-istar-Guo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16/issues"
   },
-  "homepage": "https://github.com/Val-istar-Guo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16#readme"
+  "homepage": "https://github.com/Val-istar-Guo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16#readme",
+  "dependencies": {
+    "mili": "^3.9.3"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
+    "standard-version": "^8.0.2"
+  }
 }

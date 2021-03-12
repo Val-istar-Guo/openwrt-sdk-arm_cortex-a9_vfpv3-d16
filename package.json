@@ -1,13 +1,13 @@
 {
-  "name": "openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16",
+  "name": "openwrt-sdk-arm_cortex-a9_vfpv3-d16",
   "version": "1.0.0",
   "description": "用于编译arm_cortex-a9_vfpv3-d16平台的SDK的DOCKER镜像",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "docker build -t valistarguo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16:latest .",
+    "build": "docker build -t valistarguo/openwrt-sdk-arm_cortex-a9_vfpv3-d16:latest .",
     "prepush": "npm run build",
-    "push": "docker push valistarguo/openwrt-sdk-dockerfile-arm_cortex-a9_vfpv3-d16",
+    "push": "docker push valistarguo/openwrt-sdk-arm_cortex-a9_vfpv3-d16",
     "postpush": "git push",
     "ca": "git add -A && git-cz -av",
     "commit": "git-cz",

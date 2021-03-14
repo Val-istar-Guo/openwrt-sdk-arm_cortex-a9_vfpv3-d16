@@ -7,6 +7,6 @@ RUN apt-get update && \
     apt-get install xz-utils vim -y && \
     tar -xvf /root/${OPENWRT_SDK}.tar.xz  && \
     mv /root/${OPENWRT_SDK} /root/sdk && cd /root/sdk &&\
-    apt-get install build-essential ccache flex gawk gettext git liblzma-dev libncurses5-dev libssl-dev python subversion u-boot-tools unzip wget xsltproc zlib1g-dev python3 -y && \
+    apt-get install build-essential ccache flex gawk gettext git liblzma-dev libncurses5-dev libssl-dev python subversion u-boot-tools unzip wget xsltproc zlib1g-dev python3 rsync -y && \
     ./scripts/feeds update -a && \
     ./scripts/feeds install -a
